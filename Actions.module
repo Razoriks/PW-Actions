@@ -18,7 +18,7 @@ class Actions extends Process implements Module, ConfigurableModule {
 		return array(
 			'title' => __('Actions'), // getModuleInfo title          
 			'summary' => __('Provide action to another modules or scripts'), // getModuleInfo summary 
-			'version' => 0.01,
+			'version' => 0.09,
 			'permanent' => false, 
 			'singular' => true,
 			'icon' => 'link'
