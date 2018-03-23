@@ -8,7 +8,6 @@
  * This file licensed under Mozilla Public License v2.0 http://mozilla.org/MPL/2.0/
  * 
  * https://processwire.com
- * http://anwes.ru
  *
  */
 
@@ -42,6 +41,9 @@ class Actions extends Process implements Module, ConfigurableModule {
 		if(!$fieldgroup->id) throw new WireException("Unable to create repeater fieldgroup: action"); 
 
 		//Create template for action page
+
+		// TODO: Нужно добавить отключение компилятора шаблона
+
 		$template = new Template(); 
 		$template->name = "action"; 
 		$template->fieldgroup = $fieldgroup; 

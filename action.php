@@ -1,4 +1,4 @@
-<?php
+<?php namespace ProcessWire;
 	if($input->urlSegment1 == "")
 		include('./actions/index.php');
 	else
