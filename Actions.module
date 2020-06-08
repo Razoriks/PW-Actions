@@ -42,17 +42,18 @@ class Actions extends Process implements Module, ConfigurableModule {
 
 		//Create template for action page
 
-		// TODO: Нужно добавить отключение компилятора шаблона
+		// TODO: Добавить работу с ролями и правами
 
 		$template = new Template(); 
 		$template->name = "action"; 
 		$template->fieldgroup = $fieldgroup; 
-		$template->flags = Template::flagSystem;	
+		// $template->flags = Template::flagSystem;
 		$template->noChildren = 1;
 		$template->noParents = 1; // prevents users from creating pages with this template, but not us
 		$template->noGlobal = 1; 
 		$template->urlSegments = 1; 
-		$template->slashUrls = 1; 
+		$template->slashUrls = 1;
+		$template->tags = "-ActionsModule";
 		$template->save();
 		$this->message("Added Template: {$template->name}");
 
